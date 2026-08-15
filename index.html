@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore the world</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+
+</head>
+<body>
+     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="bi bi-airplane"></i> WanderWorld
+            </a>
+
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="destinations.html">Destinations</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="packages.html">Packages</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+
+                    <li class="nav-item ms-lg-2">
+                        <a class="btn btn-primary" href="booking.html">
+                            Book Now
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <!-- ================= HERO SECTION ================= -->
+
+    <section class="hero">
+
+        <div class="hero-content text-center text-white">
+
+            <h1>Explore The World</h1>
+
+            <p>
+                Discover beautiful destinations and create unforgettable memories.
+            </p>
+
+            <button class="btn btn-primary btn-lg" id="exploreBtn">
+                Explore Now
+            </button>
+
+        </div>
+
+    </section>
+    <!-- ================= SEARCH SECTION ================= -->
+
+    <section class="search-section">
+
+        <div class="container">
+
+            <div class="search-box">
+
+                <h2 class="text-center mb-4">
+                    Find Your Perfect Destination
+                </h2>
+
+                <div class="row g-3">
+
+                    <div class="col-md-8">
+                        <input type="text"
+                            id="destinationSearch"
+                            class="form-control"
+                            placeholder="Search destination...">
+                    </div>
+
+                    <div class="col-md-4">
+                        <button class="btn btn-primary w-100"
+                            id="searchBtn">
+                            <i class="bi bi-search"></i>
+                            Search
+                        </button>
+                    </div>
+
+                </div>
+
+                <p id="searchMessage" class="text-center mt-3"></p>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ================= DESTINATIONS ================= -->
+
+    <section class="destinations py-5" id="destinations">
+
+        <div class="container">
+
+            <div class="section-title text-center mb-5">
+
+                <h2>Popular Destinations</h2>
+
+                <p>
+                    Explore some of the world's most beautiful places.
+                </p>
+
+            </div>
+
+            <!-- JavaScript will create destination cards here -->
+
+            <div class="row g-4" id="destinationContainer">
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ================= WHY CHOOSE US ================= -->
+
+    <section class="why-us py-5">
+
+        <div class="container">
+
+            <div class="section-title text-center mb-5">
+
+                <h2>Why Choose WanderWorld?</h2>
+
+                <p>
+                    We make your travel experience simple and memorable.
+                </p>
+
+            </div>
+
+            <div class="row g-4">
+
+                <div class="col-md-3">
+
+                    <div class="feature-card text-center">
+
+                        <i class="bi bi-cash-stack"></i>
+
+                        <h4>Best Prices</h4>
+
+                        <p>
+                            Affordable travel packages for every budget.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-3">
+
+                    <div class="feature-card text-center">
+
+                        <i class="bi bi-shield-check"></i>
+
+                        <h4>Safe Travel</h4>
+
+                        <p>
+                            Your safety is our top priority.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-3">
+
+                    <div class="feature-card text-center">
+
+                        <i class="bi bi-person-check"></i>
+
+                        <h4>Expert Guides</h4>
+
+                        <p>
+                            Travel with experienced local guides.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-3">
+
+                    <div class="feature-card text-center">
+
+                        <i class="bi bi-headset"></i>
+
+                        <h4>24/7 Support</h4>
+
+                        <p>
+                            We are always available to help you.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ================= PACKAGES ================= -->
+
+    <section class="packages py-5">
+
+        <div class="container">
+
+            <div class="section-title text-center mb-5">
+
+                <h2>Popular Tour Packages</h2>
+
+                <p>
+                    Choose a package and start your adventure.
+                </p>
+
+            </div>
+
+            <!-- JavaScript will create package cards here -->
+
+            <div class="row g-4" id="packageContainer">
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ================= TESTIMONIALS ================= -->
+
+    <section class="testimonials py-5">
+
+        <div class="container">
+
+            <div class="section-title text-center mb-5">
+
+                <h2>What Our Travelers Say</h2>
+
+            </div>
+
+            <div class="row g-4">
+
+                <div class="col-md-4">
+
+                    <div class="testimonial-card">
+
+                        <p>
+                            "Amazing experience! The trip was perfectly organized."
+                        </p>
+
+                        <h5>— Priya</h5>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-4">
+
+                    <div class="testimonial-card">
+
+                        <p>
+                            "The booking process was easy and the destination was beautiful."
+                        </p>
+
+                        <h5>— Rahul</h5>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-4">
+
+                    <div class="testimonial-card">
+
+                        <p>
+                            "One of the best travel experiences I've ever had."
+                        </p>
+
+                        <h5>— Ananya</h5>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="bg-dark text-white text-center py-4">
+
+        <div class="container">
+
+            <h5>
+                <i class="bi bi-airplane"></i> WanderWorld
+            </h5>
+
+            <p class="mb-2">
+                Explore. Discover. Experience.
+            </p>
+
+            <div class="social-icons">
+
+                <i class="bi bi-facebook"></i>
+                <i class="bi bi-instagram"></i>
+                <i class="bi bi-twitter"></i>
+                <i class="bi bi-youtube"></i>
+
+            </div>
+
+            <hr>
+
+            <p class="mb-0">
+                © 2026 WanderWorld. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+
+
+
+
+    
+</body>
+<script>
+    // ===============================
+// WANDERWORLD - HOME PAGE
+// ===============================
+
+
+// ===============================
+// 1. DESTINATION DATA
+// ===============================
+
+const destinations = [
+    {
+        name: "Bali",
+        country: "Indonesia",
+        price: 25000,
+        image: "images/bali.jpg"
+    },
+
+    {
+        name: "Paris",
+        country: "France",
+        price: 50000,
+        image: "images/paris.jpg"
+    },
+
+    {
+        name: "Maldives",
+        country: "Maldives",
+        price: 35000,
+        image: "images/maldives.jpg"
+    },
+
+    {
+        name: "Dubai",
+        country: "UAE",
+        price: 30000,
+        image: "images/dubai.jpg"
+    },
+
+    {
+        name: "Switzerland",
+        country: "Switzerland",
+        price: 60000,
+        image: "images/switzerland.jpg"
+    },
+
+    {
+        name: "London",
+        country: "United Kingdom",
+        price: 55000,
+        image: "images/london.jpg"
+    }
+];
+
+
+// ===============================
+// 2. GET DESTINATION CONTAINER
+// ===============================
+
+const destinationContainer =
+    document.getElementById("destinationContainer");
+
+
+// ===============================
+// 3. DISPLAY DESTINATIONS
+// ===============================
+
+function displayDestinations(destinationList) {
+
+    destinationContainer.innerHTML = "";
+
+    destinationList.forEach(function(destination) {
+
+        const card = document.createElement("div");
+
+        card.className = "col-md-4";
+
+        card.innerHTML = `
+        
+            <div class="destination-card">
+
+                <img src="${destination.image}"
+                     alt="${destination.name}">
+
+                <div class="destination-content">
+
+                    <h4>${destination.name}</h4>
+
+                    <p class="location">
+                        <i class="bi bi-geo-alt"></i>
+                        ${destination.country}
+                    </p>
+
+                    <p class="price">
+                        Starting from ₹${destination.price.toLocaleString("en-IN")}
+                    </p>
+
+                    <button class="btn btn-primary">
+                        Explore
+                    </button>
+
+                </div>
+
+            </div>
+        
+        `;
+
+        destinationContainer.appendChild(card);
+    });
+}
+
+
+// ===============================
+// 4. DISPLAY DESTINATIONS
+// ===============================
+
+displayDestinations(destinations);
+
+
+// ===============================
+// 5. SEARCH DESTINATION
+// ===============================
+
+const searchInput =
+    document.getElementById("destinationSearch");
+
+const searchButton =
+    document.getElementById("searchBtn");
+
+const searchMessage =
+    document.getElementById("searchMessage");
+
+
+searchButton.addEventListener("click", function() {
+
+    const searchText =
+        searchInput.value.toLowerCase().trim();
+
+
+    // Check empty search
+
+    if (searchText === "") {
+
+        displayDestinations(destinations);
+
+        searchMessage.textContent =
+            "Showing all destinations.";
+
+        return;
+    }
+
+
+    // Filter destinations
+
+    const filteredDestinations =
+        destinations.filter(function(destination) {
+
+            return (
+                destination.name.toLowerCase().includes(searchText) ||
+                destination.country.toLowerCase().includes(searchText)
+            );
+
+        });
+
+
+    // Display results
+
+    displayDestinations(filteredDestinations);
+
+
+    // Search message
+
+    if (filteredDestinations.length > 0) {
+
+        searchMessage.textContent =
+            `${filteredDestinations.length} destination(s) found.`;
+
+    } else {
+
+        searchMessage.textContent =
+            "No destination found.";
+
+    }
+
+});
+
+
+// ===============================
+// 6. SEARCH USING ENTER KEY
+// ===============================
+
+searchInput.addEventListener("keyup", function(event) {
+
+    if (event.key === "Enter") {
+
+        searchButton.click();
+
+    }
+
+});
+
+
+// ===============================
+// 7. EXPLORE NOW BUTTON
+// ===============================
+
+const exploreButton =
+    document.getElementById("exploreBtn");
+
+
+exploreButton.addEventListener("click", function() {
+
+    document.getElementById("destinations")
+        .scrollIntoView({
+            behavior: "smooth"
+        });
+
+});
+</script>
+</html>
