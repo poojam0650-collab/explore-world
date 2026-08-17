@@ -356,6 +356,78 @@
         </div>
 
     </footer>
+    <!-- ===============================
+     PACKAGE DETAILS MODAL
+================================ -->
+
+<div class="modal fade" id="packageModal" tabindex="-1">
+
+    <div class="modal-dialog modal-dialog-centered">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h5 class="modal-title" id="modalPackageName">
+                    Package Details
+                </h5>
+
+                <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal">
+                </button>
+
+            </div>
+
+            <div class="modal-body">
+
+                <img id="modalPackageImage"
+                     src=""
+                     alt="Package"
+                     class="img-fluid rounded mb-3">
+
+                <p>
+                    <strong>📍 Destination:</strong>
+                    <span id="modalDestination"></span>
+                </p>
+
+                <p>
+                    <strong>📅 Duration:</strong>
+                    <span id="modalDuration"></span>
+                </p>
+
+                <p>
+                    <strong>💰 Price:</strong>
+                    ₹<span id="modalPrice"></span>
+                </p>
+
+                <p id="modalDescription"></p>
+
+            </div>
+
+            <div class="modal-footer">
+
+                <button type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal">
+                    Close
+                </button>
+
+                <a href="booking.html"
+                   class="btn btn-primary">
+                    🎫 Book Now
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+    <script src="js/index.js"></script>
+</body>
+</html>
 
 
 
@@ -365,223 +437,3 @@
 
     
 </body>
-<script>
-    // ===============================
-// WANDERWORLD - HOME PAGE
-// ===============================
-
-
-// ===============================
-// 1. DESTINATION DATA
-// ===============================
-
-const destinations = [
-    {
-        name: "Bali",
-        country: "Indonesia",
-        price: 25000,
-        image: "images/bali.jpg"
-    },
-
-    {
-        name: "Paris",
-        country: "France",
-        price: 50000,
-        image: "images/paris.jpg"
-    },
-
-    {
-        name: "Maldives",
-        country: "Maldives",
-        price: 35000,
-        image: "images/maldives.jpg"
-    },
-
-    {
-        name: "Dubai",
-        country: "UAE",
-        price: 30000,
-        image: "images/dubai.jpg"
-    },
-
-    {
-        name: "Switzerland",
-        country: "Switzerland",
-        price: 60000,
-        image: "images/switzerland.jpg"
-    },
-
-    {
-        name: "London",
-        country: "United Kingdom",
-        price: 55000,
-        image: "images/london.jpg"
-    }
-];
-
-
-// ===============================
-// 2. GET DESTINATION CONTAINER
-// ===============================
-
-const destinationContainer =
-    document.getElementById("destinationContainer");
-
-
-// ===============================
-// 3. DISPLAY DESTINATIONS
-// ===============================
-
-function displayDestinations(destinationList) {
-
-    destinationContainer.innerHTML = "";
-
-    destinationList.forEach(function(destination) {
-
-        const card = document.createElement("div");
-
-        card.className = "col-md-4";
-
-        card.innerHTML = `
-        
-            <div class="destination-card">
-
-                <img src="${destination.image}"
-                     alt="${destination.name}">
-
-                <div class="destination-content">
-
-                    <h4>${destination.name}</h4>
-
-                    <p class="location">
-                        <i class="bi bi-geo-alt"></i>
-                        ${destination.country}
-                    </p>
-
-                    <p class="price">
-                        Starting from ₹${destination.price.toLocaleString("en-IN")}
-                    </p>
-
-                    <button class="btn btn-primary">
-                        Explore
-                    </button>
-
-                </div>
-
-            </div>
-        
-        `;
-
-        destinationContainer.appendChild(card);
-    });
-}
-
-
-// ===============================
-// 4. DISPLAY DESTINATIONS
-// ===============================
-
-displayDestinations(destinations);
-
-
-// ===============================
-// 5. SEARCH DESTINATION
-// ===============================
-
-const searchInput =
-    document.getElementById("destinationSearch");
-
-const searchButton =
-    document.getElementById("searchBtn");
-
-const searchMessage =
-    document.getElementById("searchMessage");
-
-
-searchButton.addEventListener("click", function() {
-
-    const searchText =
-        searchInput.value.toLowerCase().trim();
-
-
-    // Check empty search
-
-    if (searchText === "") {
-
-        displayDestinations(destinations);
-
-        searchMessage.textContent =
-            "Showing all destinations.";
-
-        return;
-    }
-
-
-    // Filter destinations
-
-    const filteredDestinations =
-        destinations.filter(function(destination) {
-
-            return (
-                destination.name.toLowerCase().includes(searchText) ||
-                destination.country.toLowerCase().includes(searchText)
-            );
-
-        });
-
-
-    // Display results
-
-    displayDestinations(filteredDestinations);
-
-
-    // Search message
-
-    if (filteredDestinations.length > 0) {
-
-        searchMessage.textContent =
-            `${filteredDestinations.length} destination(s) found.`;
-
-    } else {
-
-        searchMessage.textContent =
-            "No destination found.";
-
-    }
-
-});
-
-
-// ===============================
-// 6. SEARCH USING ENTER KEY
-// ===============================
-
-searchInput.addEventListener("keyup", function(event) {
-
-    if (event.key === "Enter") {
-
-        searchButton.click();
-
-    }
-
-});
-
-
-// ===============================
-// 7. EXPLORE NOW BUTTON
-// ===============================
-
-const exploreButton =
-    document.getElementById("exploreBtn");
-
-
-exploreButton.addEventListener("click", function() {
-
-    document.getElementById("destinations")
-        .scrollIntoView({
-            behavior: "smooth"
-        });
-
-});
-</script>
-</html>
