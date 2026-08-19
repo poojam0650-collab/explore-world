@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book your trip</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+
+</head>
+<body>
+
+    <!-- ===============================
+         NAVBAR
+    ================================ -->
+
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+
+        <div class="container">
+
+            <a class="navbar-brand" href="index.html">
+                🌍 WanderWorld
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ===============================
+         BOOKING SECTION
+    ================================ -->
+
+    <section class="container py-5">
+
+        <div class="row justify-content-center">
+
+            <div class="col-md-8">
+
+                <h2 class="text-center mb-4">
+                    🎫 Book Your Trip
+                </h2>
+
+
+                <!-- Selected Package -->
+
+                <div class="card mb-4">
+
+                    <div class="card-body">
+
+                        <h4 id="bookingPackageName">
+                            Package
+                        </h4>
+
+                        <p>
+                            📍
+                            <span id="bookingDestination"></span>
+                        </p>
+
+                        <p>
+                            📅
+                            <span id="bookingDuration"></span>
+                        </p>
+
+                        <h5>
+                            💰 ₹<span id="bookingPrice"></span>
+                        </h5>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Booking Form -->
+
+                <div class="card">
+
+                    <div class="card-body">
+
+                        <form id="bookingForm">
+
+                            <div class="mb-3">
+
+                                <label class="form-label">
+                                    Full Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="fullName"
+                                    class="form-control"
+                                    required>
+
+                            </div>
+
+
+                            <div class="mb-3">
+
+                                <label class="form-label">
+                                    Email
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    class="form-control"
+                                    required>
+
+                            </div>
+
+
+                            <div class="mb-3">
+
+                                <label class="form-label">
+                                    Phone Number
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    class="form-control"
+                                    required>
+
+                            </div>
+
+
+                            <div class="mb-3">
+
+                                <label class="form-label">
+                                    Number of Travelers
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="travelers"
+                                    class="form-control"
+                                    min="1"
+                                    value="1"
+                                    required>
+
+                            </div>
+
+
+                            <div class="mb-3">
+
+                                <label class="form-label">
+                                    Travel Date
+                                </label>
+
+                                <input
+                                    type="date"
+                                    id="travelDate"
+                                    class="form-control"
+                                    required>
+
+                            </div>
+
+
+                            <button
+                                type="submit"
+                                class="btn btn-primary w-100">
+
+                                Confirm Booking
+
+                            </button>
+
+                        </form>
+                        
+    <!-- ===============================
+     BOOKING CONFIRMATION
+    ================================ -->
+                        <div id="bookingConfirmation"
+                        class="alert alert-success mt-4 d-none">
+                        <h4>🎉 Booking Confirmed!</h4>
+                        <p>
+                            <strong>🎫 Booking ID:</strong>
+                            <span id="confirmBookingId"></span>
+                        </p>
+                        <p>
+                            Thank you for booking with WanderWorld.
+                        </p>
+                        <hr>
+                        <p>
+                            <strong>👤 Name:</strong>
+                            <span id="confirmName"></span>
+                        </p>
+                        <p>
+                            <strong>🎒 Package:</strong>
+                            <span id="confirmPackage"></span>
+                        </p>
+                        <p>
+                            <strong>📍 Destination:</strong>
+                            <span id="confirmDestination"></span>
+                        </p>
+                        <p>
+                            <strong>👥 Travelers:</strong>
+                            <span id="confirmTravelers"></span>
+                        </p>
+                        <p>
+                            <strong>>📅 Travel Date:</strong>
+                            <span id="confirmDate"></span>
+                        </p>
+                        <p>
+                            <strong>💰 Total Price:</strong>
+                              ₹<span id="confirmPrice"></span>
+                        </p>
+                        <button type="button"
+                        class="btn btn-dark mt-3"
+                        onclick="window.print()">
+                         🖨️ Print Booking
+                        </button>
+                    </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Bootstrap JavaScript -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+    <!-- Booking JavaScript -->
+
+    <script src="js/booking.js"></script>
+</body>
+</html>

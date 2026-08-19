@@ -174,7 +174,7 @@ const packages = [
         duration: "5 Days / 4 Nights",
         price: 25000,
         image: "images/bali.jpg",
-        description: "Enjoy beautiful beaches, tempkes, local culture and unforgettable experience in Bali"
+        description: "Enjoy beautiful beaches, temples, local culture and unforgettable experience in Bali"
     },
 
     {
@@ -275,6 +275,23 @@ explorePackageButtons.forEach(function(button) {
                 return packageItem.name === packageName;
 
             });
+            localStorage.setItem(
+                "selectedPackage",
+                JSON.stringify(selectedPackage)
+            );
+// ===============================
+// BOOK NOW BUTTON
+// ===============================
+
+const bookPackageButton =
+    document.getElementById("bookPackageBtn");
+
+
+    bookPackageButton.addEventListener("click", function() {
+
+    window.location.href = "booking.html";
+
+    });
 
 
         document.getElementById("modalPackageName").textContent =

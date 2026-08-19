@@ -69,7 +69,7 @@ section {
     height: 100vh;
 
     background-image:
-        linear-gradient(
+         linear-gradient(
             rgba(0, 0, 0, 0.45),
             rgba(0, 0, 0, 0.45)
         ),
@@ -389,4 +389,27 @@ footer h5 {
     .destination-card img {
         height: 200px;
     }
+}
+/* ===============================
+   PRINT BOOKING
+================================ */
+
+@media print {
+
+    body * {
+        visibility: hidden;
+    }
+
+    #bookingConfirmation,
+    #bookingConfirmation * {
+        visibility: visible;
+    }
+
+    #bookingConfirmation {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+
 }
