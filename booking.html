@@ -17,7 +17,7 @@
          NAVBAR
     ================================ -->
 
-    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
 
         <div class="container">
 
@@ -52,7 +52,7 @@
                     <div class="card-body">
 
                         <h4 id="bookingPackageName">
-                            Package
+                            Trip
                         </h4>
 
                         <p>
@@ -92,6 +92,7 @@
                                     type="text"
                                     id="fullName"
                                     class="form-control"
+                                    pattern="[A-Za-z ]+"
                                     required>
 
                             </div>
@@ -122,6 +123,8 @@
                                     type="tel"
                                     id="phone"
                                     class="form-control"
+                                    pattern="[6-9][0-9]{9}"
+                                    maxlength="10"
                                     required>
 
                             </div>
@@ -138,6 +141,7 @@
                                     id="travelers"
                                     class="form-control"
                                     min="1"
+                                    max="10"
                                     value="1"
                                     required>
 
@@ -212,6 +216,10 @@
                         onclick="window.print()">
                          🖨️ Print Booking
                         </button>
+                        <a href="index.html"
+                        class="btn btn-success mt-3">
+                         🏠 Back to Home
+                        </a>
                     </div>
 
                     </div>

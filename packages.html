@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Packages</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+     <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
+        <div class="container">
+
+            <a class="navbar-brand" href="index.html">
+                🌍 WanderWorld
+            </a>
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="destinations.html">
+                            Destinations
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="packages.html">
+                            Packages
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">
+                            About
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- PACKAGES -->
+    <section class="py-5">
+
+        <div class="container">
+
+            <div class="text-center mb-5">
+
+                <h1>🎒 Tour Packages</h1>
+
+                <p>
+                    Choose the perfect package for your next adventure.
+                </p>
+
+            </div>
+
+            <div class="row g-4" id="packageContainer">
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- PACKAGE DETAILS MODAL -->
+
+<div class="modal fade" id="packageModal" tabindex="-1">
+
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h5 class="modal-title" id="modalPackageName">
+                    Package Details
+                </h5>
+
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal">
+                </button>
+
+            </div>
+
+            <div class="modal-body">
+
+                <img
+                    id="modalPackageImage"
+                    src=""
+                    class="img-fluid rounded mb-3"
+                    alt="Package">
+
+                <p>
+                    📍 <strong>Destination:</strong>
+                    <span id="modalDestination"></span>
+                </p>
+
+                <p>
+                    📅 <strong>Duration:</strong>
+                    <span id="modalDuration"></span>
+                </p>
+
+                <p>
+                    💰 <strong>Price:</strong>
+                    ₹<span id="modalPrice"></span>
+                </p>
+
+                <p>
+                    <strong>Description:</strong>
+                    <span id="modalDescription"></span>
+                </p>
+
+            </div>
+
+            <div class="modal-footer">
+
+                <button
+                    type="button"
+                    class="btn btn-success"
+                    id="bookPackageBtn">
+                    🎫 Book Now
+                </button>
+
+                <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal">
+                    Close
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<!-- ================= FOOTER ================= -->
+
+    <footer class="bg-dark text-white text-center py-4">
+
+        <div class="container">
+
+            <h5>
+                <i class="bi bi-airplane"></i> WanderWorld
+            </h5>
+
+            <p class="mb-2">
+                Explore. Discover. Experience.
+            </p>
+
+            <div class="social-icons">
+
+                <i class="bi bi-facebook"></i>
+                <i class="bi bi-instagram"></i>
+                <i class="bi bi-twitter"></i>
+                <i class="bi bi-youtube"></i>
+
+            </div>
+
+            <hr>
+
+            <p class="mb-0">
+                © 2026 WanderWorld. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/packages.js"></script>
+</body>
+</html>

@@ -82,7 +82,8 @@ function displayDestinations(destinationList) {
                         Starting from ₹${destination.price.toLocaleString("en-IN")}
                     </p>
 
-                    <button class="btn btn-primary">
+                    <button class="btn btn-primary explore-destination"
+                        data-destination="${destination.name}">
                         Explore
                     </button>
 
@@ -96,6 +97,34 @@ function displayDestinations(destinationList) {
     });
 }
 displayDestinations(destinations);
+
+// ===============================
+// DESTINATION EXPLORE BUTTON
+// ===============================
+
+destinationContainer.addEventListener("click", function(event) {
+
+    if (event.target.classList.contains("explore-destination")) {
+
+        const destinationName =
+            event.target.getAttribute("data-destination");
+
+        const selectedDestination =
+            destinations.find(function(destination) {
+                return destination.name === destinationName;
+            });
+
+        localStorage.removeItem("selectedPackage");
+
+        localStorage.setItem(
+            "selectedDestination",
+            JSON.stringify(selectedDestination)
+        );
+
+        window.location.href = "destinations.html";
+    }
+
+});
 const searchInput =
     document.getElementById("destinationSearch");
 
@@ -157,9 +186,10 @@ const exploreButton =
 
 exploreButton.addEventListener("click", function() {
 
-    document.getElementById("destinations")
+    document.getElementById("destinationSearchSection")
         .scrollIntoView({
-            behavior: "smooth"
+            behavior: "smooth",
+            block: "start"
         });
 
 });
