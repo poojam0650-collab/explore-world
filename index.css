@@ -12,6 +12,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     color: #333;
     background-color: #fff;
+    
 }
 
 section {
@@ -26,7 +27,12 @@ section {
 .section-title p {
     color: #777;
 }
-
+/* .section-title{
+    padding-top: 30px;
+} */
+.page-header{
+    padding-top: 50px !important;
+}
 
 /* =========================
    NAVBAR
@@ -34,6 +40,8 @@ section {
 
 .navbar {
     padding: 15px 0;
+    position: relative;
+    z-index: 1000;
 }
 
 .navbar-brand {
@@ -61,19 +69,21 @@ section {
 .navbar .btn:hover{
     background-color: rgb(88, 83, 151);
 }
+
 /* =========================
    HERO SECTION
 ========================= */
 
 .hero {
     height: 100vh;
+    background-color: #24364b;
 
     background-image:
          linear-gradient(
             rgba(0, 0, 0, 0.45),
             rgba(0, 0, 0, 0.45)
         ),
-        url("./images/hero.jpg");
+        url("./images/hero.webp");
 
     background-size: cover;
     background-position: center;
